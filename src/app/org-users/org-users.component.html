@@ -1,0 +1,82 @@
+<!-- users header -->
+<div class="container pt-4 position-relative">
+    <nav class="navbar bg-light  ">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 ms-4">Organisation Users</span>
+        </div>
+        <div class="position-absolute d-flex end-0">
+            <button class="  me-4 btn" >Get Users </button>
+            <button class="  me-4 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Ussers</button>
+        </div>
+    </nav>
+</div>
+
+<!-- user table -->
+<div class="container user-box mt-4 d-flex justify-content-center">
+    <table class="table table-bordered text-center w-75">
+        <thead>
+            <tr>
+                <th scope="col">User Id </th>
+                <th scope="col">User Name </th>
+                <th scope="col">Password</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td><button class="btn ">Update Pass</button></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td><button class="btn ">Update Pass</button></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+
+                <td>@twitter</td>
+                <td><button class="btn ">Update Pass</button></td>
+
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td><button class="btn ">Update Pass</button></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td><button class="btn ">Update Pass</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<!-- add user modal box -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

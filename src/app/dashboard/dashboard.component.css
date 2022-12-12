@@ -1,0 +1,8 @@
+.content-wrapper{
+    background-image: url('https://wallpaperaccess.com/full/1090543.jpg'); 
+    overflow: auto;
+    width: auto;
+    height: calc(100vh - 59px);
+    
+}
+.navbar{}

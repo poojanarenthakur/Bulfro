@@ -1,0 +1,81 @@
+<!-- loc header -->
+<div class="container pt-4 position-relative">
+    <nav class="navbar bg-light  ">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 ms-4">Sites / Location</span>
+        </div>
+        <button class="position-absolute top-1 end-0 me-4 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+            Sites</button>
+    </nav>
+</div>
+<!-- locations  -->
+<div class="loc-box container  mt-2 pt-3 ">
+    <div class="container row mt-4" >
+        <div class="col-4 locations my-2" routerLink="/dashboard/system">
+            <div class=" d-flex justify-content-center ">
+                <div class="p-3">
+                   <h3>karad satara</h3>
+                   <p>984365809</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4 locations  my-2" routerLink="/dashboard/system">
+            <div class="d-flex justify-content-center">
+                <div class="p-3">
+                    <h3>karad satara</h3>
+                    <p>984365809</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 locations  my-2" routerLink="/dashboard/system">
+            <div class="d-flex justify-content-center">
+                <div class="p-3">
+                    <h3>karad satara</h3>
+                    <p>984365809</p>
+                  
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+<!-- add sites/location -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Organisation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <form class="w-75 ">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Organisation Name</label>
+                        <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Organisation Lat And Lan</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Organisation Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Organisation Lat And Lan</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

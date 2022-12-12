@@ -1,0 +1,19 @@
+.navbar {
+    border-radius: 10px;
+
+}
+
+.org-box {
+    height: 600px;
+    width: 1120px;
+    border-radius: 10px;
+}
+
+.organisation div {
+    height: 180px;
+    width: 100%;
+    /* background-color: rgba(244, 217, 170, 0.479); */
+    background-color: #c5dfec;
+    border-radius: 10px;
+
+}
