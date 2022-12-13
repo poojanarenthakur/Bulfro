@@ -8,6 +8,7 @@ import { LocationsSitesComponent } from './locations-sites/locations-sites.compo
 import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
 import{OrgDevicesComponent}from './org-devices/org-devices.component'
+import { AddDevicesComponent } from './add-devices/add-devices.component';
 
 
 
@@ -24,7 +25,8 @@ const routes: Routes = [
       { path: 'sites', component: LocationsSitesComponent },
       { path: 'system', component: SystemComponent },
       {path:'message', component:MessageComponent},
-      {path: 'devices' , component:OrgDevicesComponent}
+      {path: 'devices' , component:OrgDevicesComponent},
+      {path:'addDevice',component:AddDevicesComponent},
 
     ]
   }

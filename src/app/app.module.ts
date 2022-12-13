@@ -13,6 +13,7 @@ import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
 import { OrgDevicesComponent } from './org-devices/org-devices.component';
 import { OrgUsersComponent } from './org-users/org-users.component';
+import { AddDevicesComponent } from './add-devices/add-devices.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { OrgUsersComponent } from './org-users/org-users.component';
     SystemComponent,
     MessageComponent,
     OrgDevicesComponent,
-    OrgUsersComponent
+    OrgUsersComponent,
+    AddDevicesComponent
   ],
   imports: [
     BrowserModule,

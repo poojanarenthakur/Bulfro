@@ -4,8 +4,14 @@
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1 ms-4">Organisation Devices</span>
         </div>
-        <button class="position-absolute top-1 end-0 me-4 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
-            devices</button>
+        <button class="position-absolute top-1 end-0 me-4 btn p-0">
+            <select class="form-select">
+                <option disabled selected>Add device</option>
+                <option value="1">DWLR</option>
+                <option value="2" routerLink="/dashboard/addDevice">PHMC</option>
+                <option value="3" routerLink="/dashboard/addDevice">ARG</option>
+                <option value="4" routerLink="/dashboard/addDevice">BRWHMS</option>
+            </select></button>
     </nav>
 </div>
 <!-- devices -->
@@ -50,7 +56,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 <!-- organisation users -->
