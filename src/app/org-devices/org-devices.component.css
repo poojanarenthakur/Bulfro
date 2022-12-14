@@ -20,3 +20,6 @@ button select{
     border: none;
     /* padding: 5px; */
 }
+.dropdown-item:hover{
+    cursor: pointer;
+}

@@ -14,6 +14,8 @@ import { MessageComponent } from './message/message.component';
 import { OrgDevicesComponent } from './org-devices/org-devices.component';
 import { OrgUsersComponent } from './org-users/org-users.component';
 import { AddDevicesComponent } from './add-devices/add-devices.component';
+import { EditDevicesComponent } from './edit-devices/edit-devices.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AddDevicesComponent } from './add-devices/add-devices.component';
     MessageComponent,
     OrgDevicesComponent,
     OrgUsersComponent,
-    AddDevicesComponent
+    AddDevicesComponent,
+    EditDevicesComponent,
+  
   ],
   imports: [
     BrowserModule,

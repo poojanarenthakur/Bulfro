@@ -4,24 +4,28 @@
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1 ms-4">Organisation Devices</span>
         </div>
-        <button class="position-absolute top-1 end-0 me-4 btn p-0">
-            <select class="form-select">
-                <option disabled selected>Add device</option>
-                <option value="1">DWLR</option>
-                <option value="2" routerLink="/dashboard/addDevice">PHMC</option>
-                <option value="3" routerLink="/dashboard/addDevice">ARG</option>
-                <option value="4" routerLink="/dashboard/addDevice">BRWHMS</option>
-            </select></button>
+        <div class="dropdown position-absolute top-1 end-0 me-4 ">
+            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Add Device
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#DWLR">DWLR</li>
+                <li class="dropdown-item" routerLink="/dashboard/addDevice">PHMC</li>
+                <li class="dropdown-item" routerLink="/dashboard/addDevice">ARG</li>
+                <li class="dropdown-item" routerLink="/dashboard/addDevice">BRWHMS</li>
+                <li class="dropdown-item" routerLink="/dashboard/addDevice">FM</li>
+            </ul>
+        </div>
     </nav>
 </div>
 <!-- devices -->
 <div class="device-box container  mt-2 pt-3 ">
     <div class="container row mt-4">
-        <div class="col-4 device  my-2" routerLink="">
+        <div class="col-4 device  my-2" >
             <div class=" d-flex justify-content-center position-relative ">
                 <div class="p-3 ">
-                    <button class="position-absolute top-0  end-0  btn m-1"><i class="fa fa-pencil"
-                            aria-hidden="true"></i>
+                    <button class="position-absolute top-0  end-0  btn m-1" data-bs-toggle="modal"
+                        data-bs-target="#editDWLR"><i class="fa fa-pencil" aria-hidden="true"></i>
                     </button>
                     <h4 class="mt-4">Organisation name 1</h4>
                     <H1 class="text-center mt-1">DWLR</H1>
@@ -33,8 +37,8 @@
         <div class="col-4 device  my-2" routerLink="">
             <div class=" d-flex justify-content-center position-relative ">
                 <div class="p-3 ">
-                    <button class="position-absolute top-0  end-0  btn m-1"><i class="fa fa-pencil"
-                            aria-hidden="true"></i>
+                    <button class="position-absolute top-0  end-0  btn m-1" routerLink="/dashboard/editDevice"><i
+                            class="fa fa-pencil" aria-hidden="true"></i>
                     </button>
                     <h4 class="mt-4">Organisation name 1</h4>
                     <H1 class="text-center mt-1">ARG</H1>
@@ -46,8 +50,8 @@
         <div class="col-4 device  my-2" routerLink="">
             <div class=" d-flex justify-content-center position-relative ">
                 <div class="p-3 ">
-                    <button class="position-absolute top-0  end-0  btn m-1"><i class="fa fa-pencil"
-                            aria-hidden="true"></i>
+                    <button class="position-absolute top-0  end-0  btn m-1" routerLink="/dashboard/editDevice"><i
+                            class="fa fa-pencil" aria-hidden="true"></i>
                     </button>
                     <h4 class="mt-4">Organisation name 1</h4>
                     <H1 class="text-center mt-1">PHMC</H1>
@@ -61,3 +65,161 @@
 </div>
 <!-- organisation users -->
 <app-org-users></app-org-users>
+
+<!-- DWLR DEVICE ADD FORM -->
+
+<!-- Modal -->
+<div class="modal fade" id="DWLR" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Install New Device</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">uuid</label>
+                        <input type="text" class="form-control" placeholder="Enter uuid">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Serial</label>
+                        <input type="text" class="form-control" placeholder="Enter Serial">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Identifier</label>
+                        <input type="text" class="form-control" placeholder="Enter Identifier">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Model_id</label>
+                        <input type="text" class="form-control" placeholder="Enter Model_id">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Cable Length</label>
+                        <input type="text" class="form-control" placeholder="Enter Serial">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Cust_id</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Lat</label>
+                        <input type="text" class="form-control" placeholder="Enter lat">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Lng</label>
+                        <input type="text" class="form-control" placeholder="Enter lng">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Site Name </label>
+                        <input type="text" class="form-control" placeholder="Enter Site Name ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Sim Number</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Daily msg Count</label>
+                        <input type="text" class="form-control" placeholder="Enter Daily msg Count">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Manual_from_day_before</label>
+                        <input type="text" class="form-control" placeholder="Enter Manual from day before">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DWLR DEVICE Edit FORM -->
+
+<!-- Modal -->
+<div class="modal fade" id="editDWLR" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update Device</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">uuid</label>
+                        <input type="text" class="form-control" placeholder="Enter uuid">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Serial</label>
+                        <input type="text" class="form-control" placeholder="Enter Serial">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Identifier</label>
+                        <input type="text" class="form-control" placeholder="Enter Identifier">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Model_id</label>
+                        <input type="text" class="form-control" placeholder="Enter Model_id">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Cable Length</label>
+                        <input type="text" class="form-control" placeholder="Enter Serial">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Cust_id</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Lat</label>
+                        <input type="text" class="form-control" placeholder="Enter lat">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Lng</label>
+                        <input type="text" class="form-control" placeholder="Enter lng">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Site Name </label>
+                        <input type="text" class="form-control" placeholder="Enter Site Name ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Sim Number</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Daily msg Count</label>
+                        <input type="text" class="form-control" placeholder="Enter Daily msg Count">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Manual_from_day_before</label>
+                        <input type="text" class="form-control" placeholder="Enter Manual from day before">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
