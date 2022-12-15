@@ -10,6 +10,8 @@ import { MessageComponent } from './message/message.component';
 import{OrgDevicesComponent}from './org-devices/org-devices.component'
 import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
+import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
+import { PHMCComponent } from './Device-Details/phmc/phmc.component';
 
 
 
@@ -28,7 +30,9 @@ const routes: Routes = [
       {path:'message', component:MessageComponent},
       {path: 'devices' , component:OrgDevicesComponent},
       {path:'addDevice',component:AddDevicesComponent},
-      {path:'editDevice',component:EditDevicesComponent}
+      {path:'editDevice',component:EditDevicesComponent},
+      {path:'dwlrDetails' , component:DWLRComponent},
+      {path:'phmcDetails',component:PHMCComponent}
 
     ]
   }

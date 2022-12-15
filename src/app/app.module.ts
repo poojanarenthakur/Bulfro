@@ -15,6 +15,8 @@ import { OrgDevicesComponent } from './org-devices/org-devices.component';
 import { OrgUsersComponent } from './org-users/org-users.component';
 import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
+import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
+import { PHMCComponent } from './Device-Details/phmc/phmc.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { EditDevicesComponent } from './edit-devices/edit-devices.component';
     OrgUsersComponent,
     AddDevicesComponent,
     EditDevicesComponent,
+    DWLRComponent,
+    PHMCComponent,
   
   ],
   imports: [
