@@ -7,7 +7,7 @@ import { OrganisationComponent } from './organisation/organisation.component';
 import { LocationsSitesComponent } from './locations-sites/locations-sites.component';
 import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
-import{OrgDevicesComponent}from './org-devices/org-devices.component'
+import { OrgDevicesComponent } from './org-devices/org-devices.component'
 
 
 
@@ -15,7 +15,6 @@ import{OrgDevicesComponent}from './org-devices/org-devices.component'
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-
   {
     path: 'dashboard', component: DashboardComponent, children: [
       { path: '', redirectTo: 'org', pathMatch: 'full' },
@@ -23,11 +22,14 @@ const routes: Routes = [
       { path: 'alert', component: AlertComponent },
       { path: 'sites', component: LocationsSitesComponent },
       { path: 'system', component: SystemComponent },
-      {path:'message', component:MessageComponent},
-      {path: 'devices' , component:OrgDevicesComponent}
-
+      { path: 'message', component: MessageComponent },
+      { path: 'devices', component: OrgDevicesComponent },
+      { path: '**', redirectTo: 'org' }
     ]
-  }
+  },
+
+  { path: '**', redirectTo: 'login' }
+
 ];
 
 @NgModule({

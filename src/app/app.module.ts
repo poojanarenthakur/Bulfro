@@ -13,6 +13,9 @@ import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
 import { OrgDevicesComponent } from './org-devices/org-devices.component';
 import { OrgUsersComponent } from './org-users/org-users.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms'; import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,16 @@ import { OrgUsersComponent } from './org-users/org-users.component';
     SystemComponent,
     MessageComponent,
     OrgDevicesComponent,
-    OrgUsersComponent
+    OrgUsersComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
