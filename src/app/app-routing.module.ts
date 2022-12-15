@@ -12,6 +12,10 @@ import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
 import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
 import { PHMCComponent } from './Device-Details/phmc/phmc.component';
+import { DWLRDETAILSComponent } from './Device-Details/dwlr-details/dwlr-details.component';
+import { DWLRMESSAGEComponent } from './Device-Details/dwlr-message/dwlr-message.component';
+import { DWLRALERTSComponent } from './Device-Details/dwlr-alerts/dwlr-alerts.component';
+import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports.component';
 
 
 
@@ -31,7 +35,16 @@ const routes: Routes = [
       {path: 'devices' , component:OrgDevicesComponent},
       {path:'addDevice',component:AddDevicesComponent},
       {path:'editDevice',component:EditDevicesComponent},
-      {path:'dwlrDetails' , component:DWLRComponent},
+
+      {path:'dwlrDetails' , component:DWLRComponent , children:[
+        {path:'',redirectTo:'Details', pathMatch:'full'},
+        {path:'Details',component:DWLRDETAILSComponent},
+        {path:'Message',component:DWLRMESSAGEComponent},
+        {path:'Alert',component:DWLRALERTSComponent},
+        {path:'Report',component:DWLRREPORTSComponent},
+
+      ]},
+
       {path:'phmcDetails',component:PHMCComponent}
 
     ]
