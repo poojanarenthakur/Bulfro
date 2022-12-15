@@ -13,9 +13,17 @@ import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
 import { OrgDevicesComponent } from './org-devices/org-devices.component';
 import { OrgUsersComponent } from './org-users/org-users.component';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+=======
+import { AddDevicesComponent } from './add-devices/add-devices.component';
+import { EditDevicesComponent } from './edit-devices/edit-devices.component';
+import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
+import { PHMCComponent } from './Device-Details/phmc/phmc.component';
+
+>>>>>>> c2f3e4714fb58d772bc21ee4daf1907e486a35eb
 
 @NgModule({
   declarations: [
@@ -30,7 +38,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MessageComponent,
     OrgDevicesComponent,
     OrgUsersComponent,
+<<<<<<< HEAD
 
+=======
+    AddDevicesComponent,
+    EditDevicesComponent,
+    DWLRComponent,
+    PHMCComponent,
+  
+>>>>>>> c2f3e4714fb58d772bc21ee4daf1907e486a35eb
   ],
   imports: [
     BrowserModule,
