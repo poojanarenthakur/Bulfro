@@ -7,15 +7,11 @@ import { OrganisationComponent } from './organisation/organisation.component';
 import { LocationsSitesComponent } from './locations-sites/locations-sites.component';
 import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
-<<<<<<< HEAD
 import { OrgDevicesComponent } from './org-devices/org-devices.component'
-=======
-import{OrgDevicesComponent}from './org-devices/org-devices.component'
 import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
 import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
 import { PHMCComponent } from './Device-Details/phmc/phmc.component';
->>>>>>> c2f3e4714fb58d772bc21ee4daf1907e486a35eb
 
 
 
@@ -30,19 +26,13 @@ const routes: Routes = [
       { path: 'alert', component: AlertComponent },
       { path: 'sites', component: LocationsSitesComponent },
       { path: 'system', component: SystemComponent },
-<<<<<<< HEAD
       { path: 'message', component: MessageComponent },
       { path: 'devices', component: OrgDevicesComponent },
-      { path: '**', redirectTo: 'org' }
-=======
-      {path:'message', component:MessageComponent},
-      {path: 'devices' , component:OrgDevicesComponent},
-      {path:'addDevice',component:AddDevicesComponent},
-      {path:'editDevice',component:EditDevicesComponent},
-      {path:'dwlrDetails' , component:DWLRComponent},
-      {path:'phmcDetails',component:PHMCComponent}
+      { path: 'addDevice', component: AddDevicesComponent },
+      { path: 'editDevice', component: EditDevicesComponent },
+      { path: 'dwlrDetails', component: DWLRComponent },
+      { path: 'phmcDetails', component: PHMCComponent }
 
->>>>>>> c2f3e4714fb58d772bc21ee4daf1907e486a35eb
     ]
   },
 
