@@ -7,7 +7,7 @@ import { OrganisationComponent } from './organisation/organisation.component';
 import { LocationsSitesComponent } from './locations-sites/locations-sites.component';
 import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
-import{OrgDevicesComponent}from './org-devices/org-devices.component'
+import { OrgDevicesComponent } from './org-devices/org-devices.component'
 import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
 import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
@@ -23,7 +23,6 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-
   {
     path: 'dashboard', component: DashboardComponent, children: [
       { path: '', redirectTo: 'org', pathMatch: 'full' },
@@ -31,24 +30,18 @@ const routes: Routes = [
       { path: 'alert', component: AlertComponent },
       { path: 'sites', component: LocationsSitesComponent },
       { path: 'system', component: SystemComponent },
-      {path:'message', component:MessageComponent},
-      {path: 'devices' , component:OrgDevicesComponent},
-      {path:'addDevice',component:AddDevicesComponent},
-      {path:'editDevice',component:EditDevicesComponent},
-
-      {path:'dwlrDetails' , component:DWLRComponent , children:[
-        {path:'',redirectTo:'Details', pathMatch:'full'},
-        {path:'Details',component:DWLRDETAILSComponent},
-        {path:'Message',component:DWLRMESSAGEComponent},
-        {path:'Alert',component:DWLRALERTSComponent},
-        {path:'Report',component:DWLRREPORTSComponent},
-
-      ]},
-
-      {path:'phmcDetails',component:PHMCComponent}
+      { path: 'message', component: MessageComponent },
+      { path: 'devices', component: OrgDevicesComponent },
+      { path: 'addDevice', component: AddDevicesComponent },
+      { path: 'editDevice', component: EditDevicesComponent },
+      { path: 'dwlrDetails', component: DWLRComponent },
+      { path: 'phmcDetails', component: PHMCComponent }
 
     ]
-  }
+  },
+
+  { path: '**', redirectTo: 'login' }
+
 ];
 
 @NgModule({

@@ -13,6 +13,10 @@ import { SystemComponent } from './system/system.component';
 import { MessageComponent } from './message/message.component';
 import { OrgDevicesComponent } from './org-devices/org-devices.component';
 import { OrgUsersComponent } from './org-users/org-users.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms'; import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
 import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
@@ -36,6 +40,7 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
     MessageComponent,
     OrgDevicesComponent,
     OrgUsersComponent,
+
     AddDevicesComponent,
     EditDevicesComponent,
     DWLRComponent,
@@ -48,7 +53,11 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
