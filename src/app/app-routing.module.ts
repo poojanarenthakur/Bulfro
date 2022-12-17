@@ -34,7 +34,16 @@ const routes: Routes = [
       { path: 'devices', component: OrgDevicesComponent },
       { path: 'addDevice', component: AddDevicesComponent },
       { path: 'editDevice', component: EditDevicesComponent },
-      { path: 'dwlrDetails', component: DWLRComponent },
+      {
+        path: 'dwlrDetails', component: DWLRComponent, children: [
+          {path:'' , redirectTo:'details' ,pathMatch:'full'},
+          {path:'details' ,component:DWLRDETAILSComponent},
+          {path:'alerts',component:DWLRALERTSComponent},
+          {path:'message',component:DWLRMESSAGEComponent},
+          {path:'report',component:DWLRREPORTSComponent},
+         
+        ]
+      },
       { path: 'phmcDetails', component: PHMCComponent }
 
     ]
