@@ -13,9 +13,6 @@ import { EditDevicesComponent } from './edit-devices/edit-devices.component';
 import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
 import { PHMCComponent } from './Device-Details/phmc/phmc.component';
 
-
-
-
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -32,12 +29,9 @@ const routes: Routes = [
       { path: 'editDevice', component: EditDevicesComponent },
       { path: 'dwlrDetails', component: DWLRComponent },
       { path: 'phmcDetails', component: PHMCComponent }
-
     ]
   },
-
   { path: '**', redirectTo: 'login' }
-
 ];
 
 @NgModule({
