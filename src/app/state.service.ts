@@ -8,4 +8,8 @@ export class StateService {
   admin_info: any;
   admin = [] as any;
   constructor() { }
+
+  updateData() {
+
+  }
 }
