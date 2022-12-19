@@ -21,6 +21,11 @@ import { AddDevicesComponent } from './add-devices/add-devices.component';
 import { EditDevicesComponent } from './edit-devices/edit-devices.component';
 import { DWLRComponent } from './Device-Details/dwlr/dwlr.component';
 import { PHMCComponent } from './Device-Details/phmc/phmc.component';
+import { DWLRDETAILSComponent } from './Device-Details/dwlr-details/dwlr-details.component';
+import { DWLRMESSAGEComponent } from './Device-Details/dwlr-message/dwlr-message.component';
+import { DWLRALERTSComponent } from './Device-Details/dwlr-alerts/dwlr-alerts.component';
+import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports.component';
+
 
 
 @NgModule({
@@ -41,7 +46,12 @@ import { PHMCComponent } from './Device-Details/phmc/phmc.component';
     EditDevicesComponent,
     DWLRComponent,
     PHMCComponent,
-
+    DWLRDETAILSComponent,
+    DWLRMESSAGEComponent,
+    DWLRALERTSComponent,
+    DWLRREPORTSComponent,
+   
+  
   ],
   imports: [
     BrowserModule,
