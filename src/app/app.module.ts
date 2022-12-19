@@ -27,6 +27,7 @@ import { DWLRALERTSComponent } from './Device-Details/dwlr-alerts/dwlr-alerts.co
 import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
     DWLRMESSAGEComponent,
     DWLRALERTSComponent,
     DWLRREPORTSComponent,
+   
   
   ],
   imports: [

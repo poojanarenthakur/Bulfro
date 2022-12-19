@@ -20,6 +20,7 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
 
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -36,15 +37,16 @@ const routes: Routes = [
       { path: 'editDevice', component: EditDevicesComponent },
       {
         path: 'dwlrDetails', component: DWLRComponent, children: [
-          {path:'' , redirectTo:'details' ,pathMatch:'full'},
-          {path:'details' ,component:DWLRDETAILSComponent},
-          {path:'alerts',component:DWLRALERTSComponent},
-          {path:'message',component:DWLRMESSAGEComponent},
-          {path:'report',component:DWLRREPORTSComponent},
-         
+          { path: '', redirectTo: 'details', pathMatch: 'full' },
+          { path: 'details', component: DWLRDETAILSComponent },
+          { path: 'alerts', component: DWLRALERTSComponent },
+          { path: 'message', component: DWLRMESSAGEComponent },
+          { path: 'report', component: DWLRREPORTSComponent },
+
         ]
       },
-      { path: 'phmcDetails', component: PHMCComponent }
+      { path: 'phmcDetails', component: PHMCComponent },
+      
 
     ]
   },
