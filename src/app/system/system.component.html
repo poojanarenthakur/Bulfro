@@ -14,7 +14,8 @@
         <div class="col-4 system  my-2" routerLink="/dashboard/devices/{{sys['id']}}" *ngFor="let sys of _state.system">
             <div class=" d-flex justify-content-center ">
                 <div class="p-3">
-                    <h1>{{sys['system_name']}}</h1>
+                    <h1>{{sys['id']}}</h1>
+                    System Name:<h1>{{sys['system_name']}}</h1>
                 </div>
             </div>
         </div>
@@ -40,16 +41,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Devices_id</label>
-                        <input type="text" class="form-control" placeholder="devices_id" formControlName="devices_id" aria-describedby="basic-addon1"><br>
-                        <!-- <select class="form-select" aria-label="Default select example">
+                        <!-- <input type="text" class="form-control" placeholder="devices_id" formControlName="devices_id" aria-describedby="basic-addon1"><br> -->
+                        <select class="form-select" aria-label="Default select example">
                             <option value="3">1</option>
                             <option value="1">2</option>
                             <option value="2">3</option>
-                        </select> -->
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">org_id</label>
-                        <input type="text" class="form-control" placeholder="org_id" formControlName="org_id" aria-describedby="basic-addon1"><br>
+                        <input type="text" class="form-control" placeholder="org_id" formControlName="{{_state.org['org_id']}}" aria-describedby="basic-addon1"><br>
                         <!-- <select class="form-select" aria-label="Default select example"></select>   
                         <option value="3">1</option>
                             <option value="1">2</option>

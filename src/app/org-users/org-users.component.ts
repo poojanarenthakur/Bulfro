@@ -13,6 +13,7 @@ import { StateService } from '../state.service';
 export class OrgUsersComponent implements OnInit {
   newTask: FormGroup;
   updatetask: FormGroup;
+
   constructor(public _state: StateService,
     public _rest: RestService, public toastr: ToastrService,
     private router: Router, private route: ActivatedRoute) {
@@ -53,7 +54,11 @@ export class OrgUsersComponent implements OnInit {
       this.newTask.value.username === "" ||
       this.newTask.value.password === "" ||
       this.newTask.value.mobile === "" ||
-      this.newTask.value.address === "") {
+      this.newTask.value.address === "" ||
+      this.newTask.value.is_active === "" ||
+      this.newTask.value.org_id === "" ||
+      this.newTask.value.location_id === ""
+    ) {
       return true;
     }
     return false;

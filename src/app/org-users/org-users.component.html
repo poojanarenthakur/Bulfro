@@ -69,44 +69,49 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form [formGroup]="newTask" (submit)="add()">
+                    {{this.newTask.value | json}}
                     <div class="mb-3">
                         <label  class="form-label">First Name</label>
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" placeholder="first_name" formControlName="first_name" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="last_name" formControlName="last_name" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="email" formControlName="email" aria-describedby="basic-addon1"><br>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="username" formControlName="username" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="email" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="password" formControlName="password" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="mobile" formControlName="mobile" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="address" formControlName="address" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">is_active</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="is_active" formControlName="is_active" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">org_id</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="org_id" formControlName="org_id" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">location_id</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" placeholder="location_id" formControlName="location_id" aria-describedby="basic-addon1"><br>
                     </div>
-                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                    <button type="submit" data-dismiss="modal" class="btn btn-success w-100">Submit</button>
                 </form>
             </div>
         </div> 
