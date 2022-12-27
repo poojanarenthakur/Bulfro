@@ -18,6 +18,8 @@ export class StateService {
   devices: [] = [];
   sys_id: null | any = null;
   index: any;
+  users = [] as any;
+
   constructor(public _rest: RestService, private router: Router,
     private route: ActivatedRoute) { }
 
@@ -31,33 +33,20 @@ export class StateService {
       console.log(err)
     });
   }
-
-
-
-  // updatelocData() {
-  //   console.log("gatting location");
-  //   this.route.params.subscribe(data => {
-  //     this.org_id = data['org_id'];
-  //     this._rest.getlocbyid(this.org_id).subscribe((resp: any) => {
-  //       console.log(resp);
-  //       this.locations = (resp as any)['data'];
-  //       console.log(this.locations);
-  //     }, (err: any) => {
-  //       console.log(err)
-  //     });
-  //   });
-  // }
-  // updatelocData() {
-  //   console.log("gatting location");
-  //   this._rest.getalllocation().subscribe((resp: any) => {
-  //     console.log(resp);
-  //     this.locations = (resp as any)['data'];
-  //     console.log(this.locations);
-  //   }, (err: any) => {
-  //     console.log(err)
-  //   });
-
+  updateusersData() {
+    console.log("gatting users");
+    this._rest.getallusers().subscribe((resp: any) => {
+      console.log(resp);
+      this.users = (resp as any)['data'];
+      console.log(this.users);
+    }, (err: any) => {
+      console.log(err)
+    });
+  }
 }
+
+
+
 
 
 

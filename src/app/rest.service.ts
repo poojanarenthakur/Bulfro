@@ -87,6 +87,22 @@ export class RestService {
 
   }
 
+  add_users(data: any) {
+    if (this.checklocalstorage()) {
+      const httpOption = {
+        headers: new HttpHeaders({
+          'Authorization': <string>localStorage.getItem('createtoken')
+        })
+      };
+      // const createtoken = localStorage.getItem('createtoken');
+      const url = environment.server_url + 'users/add_users';
+      console.log(data);
+      return this._http.post(url, data, httpOption);
+    } else {
+      return data;
+    }
+  }
+
   getallorg() {
     const httpOption = {
       headers: new HttpHeaders({
@@ -106,6 +122,17 @@ export class RestService {
     }
     const createtoken = localStorage.getItem('createtoken');
     const url = environment.server_url + 'org_location/get_all_org_location';
+    return this._http.get(url, httpOption);
+  }
+
+  getallusers() {
+    const httpOption = {
+      headers: new HttpHeaders({
+        'Authorization': <string>localStorage.getItem('createtoken')
+      })
+    }
+    const createtoken = localStorage.getItem('createtoken');
+    const url = environment.server_url + 'users/get_all_user';
     return this._http.get(url, httpOption);
   }
 
