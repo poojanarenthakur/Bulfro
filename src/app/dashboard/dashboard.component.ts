@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
       this.router.navigate(['/login']);
 
     }
-    this.state.updateData();
+    this.state.updateorgData();
   }
   getdecodedaccesstoken(createtoken: string): any {
     try {

@@ -11,39 +11,25 @@
 <!-- locations  -->
 <div class="loc-box container  mt-2 pt-3 ">
     <div class="container row mt-4" >
-        <div class="col-4 locations my-2" routerLink="/dashboard/system">
+        <div class="col-4 locations my-2" routerLink="/dashboard/system/{{location['id']}}" *ngFor="let location of this._state.locations">
             <div class=" d-flex justify-content-center ">
                 <div class="p-3">
-                   <h3>karad satara</h3>
-                   <p>984365809</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-4 locations  my-2" routerLink="/dashboard/system">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h3>karad satara</h3>
-                    <p>984365809</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 locations  my-2" routerLink="/dashboard/system">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h3>karad satara</h3>
-                    <p>984365809</p>
-                  
-                   
+                    <!-- <h3 style="color:blue;">{{this._state.org['org_name']}}</h3> -->
+                    <!-- {{this._state.org[location['org_name']].org_name}} -->
+                    {{location['org_name']}}
+                   <h3 style="color:blue;">{{location['address']}}</h3>
+                   <p>{{location['contact_number']}}</p>
+                    <!-- <pre>
+                        {{this._state.org[location['org_id']] | json}}
+                    </pre> -->
                 </div>
             </div>
         </div>
     </div>
-   
+   <!-- {{this._state.locations|json}} -->
 </div>
 
 <!-- add sites/location -->
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -53,36 +39,39 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-center">
-                <form class="w-75 ">
+                <form class="w-75" [formGroup]="newTask" (submit)="add()">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Organisation Name</label>
-                        <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1" class="form-label">Organisation id</label>
+                        <input class="form-control" formControlName= "org_id" aria-describedby="basic-addon1"><br>
 
                     </div>
                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"> name </label>
+                        <input type="text" class="form-control" placeholder="name" formControlName="name" aria-describedby="basic-addon1"><br>
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label"> Lat </label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" placeholder="lat" formControlName="lat" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label"> Lan </label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" placeholder="lng" formControlName="lng" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <input type="text" class="form-control" placeholder="address" formControlName="address" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label"> Person  contact</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" placeholder="contact_person" formControlName="contact_person" aria-describedby="basic-addon1"><br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Single Point OF contact</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" placeholder="contact_number" formControlName="contact_number" aria-describedby="basic-addon1"><br>
                     </div>
                     <button type="submit" class="btn btn-success w-100">Add Sites</button>
                 </form>
             </div>
-
         </div>
     </div>
 </div>

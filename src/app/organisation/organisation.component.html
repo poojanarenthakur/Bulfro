@@ -2,80 +2,32 @@
 <div class="container pt-4 position-relative">
     <nav class="navbar bg-light  ">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1 ms-4">Organisation</span>
+            <span class="navbar-brand mb-0 h1 ms-4" style="color:blue;">Organisation</span>
         </div>
-        <button class="position-absolute top-1 end-0 me-4 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
-            Org</button>
+        <button class="position-absolute top-1 end-0 me-4 btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: blue;">Add Org</button>
     </nav>
 </div>
+
 <!-- organisation   -->
-<div class="org-box container  mt-2 pt-3 ">
+<div class="org-box container  mt-2 pt-3">
     <div class="container row mt-4">
-        <div class="col-4 organisation  my-2" routerLink="/dashboard/sites">
-            <div class=" d-flex justify-content-center ">
+        <div class="col-4 organisation  my-2" routerLink="/dashboard/sites/{{org['id']}}" *ngFor="let org of this._state.org">
+            <div class=" d-flex justify-content-center" >
                 <div class="p-3">
-                    <h4>Octoedge Technology</h4>
-                    <p> JM road Shivajinagar,Pune</p>
-                    <p>98732457092</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-4 organisation  my-2" routerLink="/dashboard/sites">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h4>Octoedge Technology</h4>
-                    <p> JM road Shivajinagar,Pune</p>
-                    <p>98732457092</p>
+                    <h4 style="color:blue;"> {{org['org_name']}}</h4>
+                    <p> {{org['address']}}</p>
+                    <p>{{org['contact_number']}}</p>
+                    <p>{{org['id']}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-4 organisation  my-2" routerLink="/dashboard/sites">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h4>Octoedge Technology</h4>
-                    <p> JM road Shivajinagar,Pune</p>
-                    <p>98732457092</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container row" routerLink="/dashboard/sites">
-        <div class="col-4  organisation  my-2 ">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h4>Octoedge Technology</h4>
-                    <p> JM road Shivajinagar,Pune</p>
-                    <p>98732457092</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 organisation  my-2" routerLink="/dashboard/sites">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h4>Octoedge Technology</h4>
-                    <p> JM road Shivajinagar,Pune</p>
-                    <p>98732457092</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4 organisation my-2" routerLink="/dashboard/sites">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h4>Octoedge Technology</h4>
-                    <p> JM road Shivajinagar,Pune</p>
-                    <p>98732457092</p>
-                </div>
-            </div>
-        </div>
+         <!-- {{ this._state.org | json}} -->
     </div>
 </div>
-
 <!-- add organisation -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -83,37 +35,45 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-center">
-                <form class="w-75 ">
+                
+                <form class="w-75" [formGroup]="newTask" (submit)="add()">
+                    <!-- {{this.newTask.value | json}} -->
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Organisation Name</label>
-                        <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" placeholder="org_name" formControlName="org_name" aria-describedby="basic-addon1"><br>
+                    </div>
 
-                    </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Organisation Lat </label>
-                        <input type="text" class="form-control" id="">
+                        <label for="exampleInputPassword1" class="form-label">Organisation Lat</label>
+                        <input type="text" class="form-control" placeholder="lat" formControlName="lat" aria-describedby="basic-addon1"><br>
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Organisation  Lan</label>
-                        <input type="text" class="form-control" id="">
+                        <label for="exampleInputPassword1" class="form-label">Organisation Lan</label>
+                        <input type="text" class="form-control" placeholder="lng" formControlName="lng" aria-describedby="basic-addon1"><br>
                     </div>
+
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Organisation Address</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <input type="text" class="form-control" placeholder="address" formControlName="address" aria-describedby="basic-addon1"><br>
                     </div>
+
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label"> Contact Person</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" placeholder="contact_person" formControlName="contact_person" aria-describedby="basic-addon1"><br>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Single Point of contact</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" placeholder="contact_number" formControlName="contact_number" aria-describedby="basic-addon1"><br>
                     </div>
-                    <button type="submit" class="btn btn-success w-100">Add Org</button>
+
+                    <div class="modal-footer">
+                        <!-- {{newTask | json}} -->
+                        <button type="submit" data-dismiss="modal" class="btn btn-success w-100">Add Org</button>
+                    </div>
                 </form>
             </div>
-
         </div>
     </div>
-</div>
+</div> 

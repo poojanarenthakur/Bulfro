@@ -21,7 +21,7 @@
 <!-- devices -->
 <div class="device-box container  mt-2 pt-3 ">
     <div class="container row mt-4">  
-        <div class="col-4 device  my-2" >
+        <div class="col-4 device  my-2" *ngFor="let device of _state.devices" >
             <div class=" d-flex justify-content-center position-relative " >
                 <div class="p-3 ">
                     <button class="position-absolute top-0  start-0  btn m-1 mb-1" routerLink="/dashboard/dwlrDetails"><i class="fa fa-eye p-0" aria-hidden="true"></i>
@@ -37,6 +37,7 @@
                  
                 </div>
             </div>
+            {{this.device | json}}
         </div>
         <div class="col-4 device  my-2" >
             <div class=" d-flex justify-content-center position-relative ">

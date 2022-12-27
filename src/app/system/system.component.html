@@ -11,30 +11,15 @@
 <!-- system   -->
 <div class="sys-box container  mt-2 pt-3 ">
     <div class="container row mt-4">
-        <div class="col-4 system  my-2" routerLink="/dashboard/devices">
+        <div class="col-4 system  my-2" routerLink="/dashboard/devices/{{sys['id']}}" *ngFor="let sys of _state.system">
             <div class=" d-flex justify-content-center ">
                 <div class="p-3">
-                    <h1>System 1</h1>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-4 system  my-2" routerLink="/dashboard/devices">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h1>System 2</h1>
+                    <h1>{{sys['system_name']}}</h1>
                 </div>
             </div>
         </div>
-        <div class="col-4 system  my-2" routerLink="/dashboard/devices">
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                    <h1>System 3</h1>
-                </div>
-            </div>
-        </div>
+        <!-- {{this._state.system | json}} -->
     </div>
-
 </div>
 
 <!-- add -->
@@ -48,44 +33,47 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-center">
-                <form class="w-75 ">
+                <form class="w-75" [formGroup]="newTask" (submit)="add()">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">System Name</label>
-                        <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" placeholder="system_name" formControlName="system_name" aria-describedby="basic-addon1"><br>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Devices_id</label>
+                        <input type="text" class="form-control" placeholder="devices_id" formControlName="devices_id" aria-describedby="basic-addon1"><br>
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option value="3">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                        </select> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">org_id</label>
+                        <input type="text" class="form-control" placeholder="org_id" formControlName="org_id" aria-describedby="basic-addon1"><br>
+                        <!-- <select class="form-select" aria-label="Default select example"></select>   
+                        <option value="3">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                        </select> -->
+                    </div>
 
-                    </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Devices Name</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <label for="exampleInputPassword1" class="form-label">org_location_id</label>
+                        <input type="text" class="form-control" placeholder="org_location_id" formControlName="org_location_id" aria-describedby="basic-addon1"><br>
+                        <!-- <select class="form-select" aria-label="Default select example">
                             <option value="3">1</option>
                             <option value="1">2</option>
                             <option value="2">3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Org Name</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="3">1</option>
-                            <option value="1">2</option>
-                            <option value="2">3</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Org Location </label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="3">1</option>
-                            <option value="1">2</option>
-                            <option value="2">3</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Current Status </label>
-                        <select class="form-select" aria-label="Default select example">
+                        <input type="text" class="form-control" placeholder="current_status" formControlName="current_status" aria-describedby="basic-addon1"><br>
+                        <!-- <select class="form-select" aria-label="Default select example">
                             <option value="3">0</option>
                             <option value="1">1</option>
                           
-                        </select>
+                        </select> -->
                     </div>
                     <button type="submit" class="btn btn-success w-100">Add System</button>
                 </form>

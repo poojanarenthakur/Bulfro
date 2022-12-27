@@ -50,8 +50,8 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
     DWLRMESSAGEComponent,
     DWLRALERTSComponent,
     DWLRREPORTSComponent,
-   
-  
+
+
   ],
   imports: [
     BrowserModule,
@@ -59,7 +59,8 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
     HttpClientModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

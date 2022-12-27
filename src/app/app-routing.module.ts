@@ -26,30 +26,24 @@ const routes: Routes = [
       { path: '', redirectTo: 'org', pathMatch: 'full' },
       { path: 'org', component: OrganisationComponent },
       { path: 'alert', component: AlertComponent },
-      { path: 'sites', component: LocationsSitesComponent },
-      { path: 'system', component: SystemComponent },
+      { path: 'sites/:org_id', component: LocationsSitesComponent },
+      { path: 'system/:org_location_id', component: SystemComponent },
       { path: 'message', component: MessageComponent },
-      { path: 'devices', component: OrgDevicesComponent },
+      { path: 'devices/:sys_id', component: OrgDevicesComponent },
       { path: 'addDevice', component: AddDevicesComponent },
       { path: 'editDevice', component: EditDevicesComponent },
-<<<<<<< HEAD
-      { path: 'dwlrDetails', component: DWLRComponent },
-      { path: 'phmcDetails', component: PHMCComponent }
-=======
       {
         path: 'dwlrDetails', component: DWLRComponent, children: [
           { path: '', redirectTo: 'details', pathMatch: 'full' },
           { path: 'details', component: DWLRDETAILSComponent },
           { path: 'alerts', component: DWLRALERTSComponent },
           { path: 'message', component: DWLRMESSAGEComponent },
-          { path: 'report', component: DWLRREPORTSComponent },
-
+          { path: 'report', component: DWLRREPORTSComponent }
         ]
       },
       { path: 'phmcDetails', component: PHMCComponent },
-      
 
->>>>>>> fa296b34f940cf4216d57ba5fedc53ee5db4e109
+
     ]
   },
   { path: '**', redirectTo: 'login' }
