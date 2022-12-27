@@ -32,6 +32,10 @@ const routes: Routes = [
       { path: 'devices/:sys_id', component: OrgDevicesComponent },
       { path: 'addDevice', component: AddDevicesComponent },
       { path: 'editDevice', component: EditDevicesComponent },
+
+      { path: 'dwlrDetails', component: DWLRComponent },
+      { path: 'phmcDetails', component: PHMCComponent },
+
       {
         path: 'dwlrDetails', component: DWLRComponent, children: [
           { path: '', redirectTo: 'details', pathMatch: 'full' },
