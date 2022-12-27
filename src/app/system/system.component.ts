@@ -15,7 +15,7 @@ export class SystemComponent implements OnInit {
   newTask: FormGroup;
   updatetask: FormGroup;
   index = -1;
-
+  // org_id: any;
   constructor(private router: Router,
     public _rest: RestService,
     private route: ActivatedRoute, public toastr: ToastrService,
