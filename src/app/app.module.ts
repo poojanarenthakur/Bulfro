@@ -50,8 +50,8 @@ import { DWLRREPORTSComponent } from './Device-Details/dwlr-reports/dwlr-reports
     DWLRMESSAGEComponent,
     DWLRALERTSComponent,
     DWLRREPORTSComponent,
-   
-  
+
+
   ],
   imports: [
     BrowserModule,

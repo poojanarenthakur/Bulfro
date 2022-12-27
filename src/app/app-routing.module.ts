@@ -32,10 +32,10 @@ const routes: Routes = [
       { path: 'devices', component: OrgDevicesComponent },
       { path: 'addDevice', component: AddDevicesComponent },
       { path: 'editDevice', component: EditDevicesComponent },
-<<<<<<< HEAD
+
       { path: 'dwlrDetails', component: DWLRComponent },
-      { path: 'phmcDetails', component: PHMCComponent }
-=======
+      { path: 'phmcDetails', component: PHMCComponent },
+
       {
         path: 'dwlrDetails', component: DWLRComponent, children: [
           { path: '', redirectTo: 'details', pathMatch: 'full' },
@@ -47,9 +47,6 @@ const routes: Routes = [
         ]
       },
       { path: 'phmcDetails', component: PHMCComponent },
-
-
->>>>>>> fa296b34f940cf4216d57ba5fedc53ee5db4e109
     ]
   },
   { path: '**', redirectTo: 'login' }
